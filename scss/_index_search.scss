@@ -19,13 +19,14 @@
         flex-direction: column;
         padding: 0 6px;
 
-        label {
+        label {font-size: 16px;
             line-height: 1.2;
             margin-bottom: 5px;
         }
 
         select,
         input {
+            font-size: 16px;
             height: 40px;
             line-height: 40px;
             color: $dts_search_txt;
@@ -64,6 +65,7 @@
         }
 
         input {
+            font-size: 16px;
             width: 48%;
         }
     }
@@ -270,7 +272,7 @@
     .search_group {
         flex-wrap: wrap;
         justify-content: space-between;
-     
+
 
         .form_select,
         .form_datepicker {
@@ -279,7 +281,8 @@
         }
 
         .serch_btn {
-            padding-top:1rem;width: 100%;
+            padding-top: 1rem;
+            width: 100%;
             max-width: 150px;
             margin: 0 auto;
         }
@@ -293,20 +296,25 @@
         }
 
     }
-    .search_bar{
+
+    .search_bar {
         padding: 10px 15px;
     }
 
-    .hotissue{
+    .hotissue {
         align-items: center;
-        h2{
+
+        h2 {
             width: 40px;
             padding-right: 5px;
         }
-        ul{
+
+        ul {
             flex-wrap: wrap;
+
             li {
-                a{display: block;
+                a {
+                    display: block;
                     padding: 5px 0;
                 }
             }

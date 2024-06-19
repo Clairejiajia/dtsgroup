@@ -294,6 +294,7 @@ a {
 
 .search_group .form_select label,
 .search_group .form_datepicker label {
+  font-size: 16px;
   line-height: 1.2;
   margin-bottom: 5px;
 }
@@ -302,6 +303,7 @@ a {
 .search_group .form_select input,
 .search_group .form_datepicker select,
 .search_group .form_datepicker input {
+  font-size: 16px;
   height: 40px;
   line-height: 40px;
   color: #666666;
@@ -343,6 +345,7 @@ a {
 }
 
 .search_group .date_group input {
+  font-size: 16px;
   width: 48%;
 }
 
