@@ -311,6 +311,7 @@ header {
 
 .search_group .form_select label,
 .search_group .form_datepicker label {
+  font-size: 16px;
   line-height: 1.2;
   margin-bottom: 5px;
 }
@@ -319,6 +320,7 @@ header {
 .search_group .form_select input,
 .search_group .form_datepicker select,
 .search_group .form_datepicker input {
+  font-size: 15px;
   height: 40px;
   line-height: 40px;
   color: #666666;
@@ -561,10 +563,19 @@ header {
             justify-content: space-between;
     margin-bottom: 1rem;
   }
-  .search_group .form_select, .search_group .form_datepicker {
+  .search_group .form_select,
+  .search_group .form_datepicker {
     padding: 0;
   }
-  .search_group .form_select select, .search_group .form_select input, .search_group .form_datepicker select, .search_group .form_datepicker input {
+  .search_group .form_select label,
+  .search_group .form_datepicker label {
+    font-size: 15px;
+  }
+  .search_group .form_select select,
+  .search_group .form_select input,
+  .search_group .form_datepicker select,
+  .search_group .form_datepicker input {
+    font-size: 14px;
     height: 35px;
     line-height: 35px;
   }
@@ -573,6 +584,12 @@ header {
   }
   .search_group .form_datepicker {
     margin: 0;
+  }
+  .search_group .form_datepicker input {
+    -webkit-text-size-adjust: none;
+       -moz-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+            text-size-adjust: none;
   }
   .search_group .serch_btn {
     padding-top: 1rem;

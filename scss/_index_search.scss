@@ -20,12 +20,14 @@
         padding: 0 6px;
 
         label {
+            font-size: 16px;
             line-height: 1.2;
             margin-bottom: 5px;
         }
 
         select,
         input {
+            font-size: 15px;
             height: 40px;
             line-height: 40px;
             color: $dts_search_txt;
@@ -275,20 +277,31 @@
         flex-wrap: wrap;
         justify-content: space-between;
         margin-bottom: 1rem;
-        .form_select, .form_datepicker {
+
+        .form_select,
+        .form_datepicker {
             padding: 0;
-            select,input{
-                height: 35px;line-height: 35px;
+label{
+    font-size: 15px;
+}
+            select,
+            input {font-size: 14px;
+                height: 35px;
+                line-height: 35px;
             }
         }
+
         .form_select {
             margin: 0 0 0.5rem 0;
-          
+
         }
 
         .form_datepicker {
             margin: 0;
-       
+
+            input {
+                text-size-adjust: none;
+            }
         }
 
         .serch_btn {
