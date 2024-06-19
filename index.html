@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本旅遊、沖繩、北海道、自由行、團體旅行｜大榮旅遊</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- header為假樣式示意用，串接正式用header 請移除樣式 -->
+    <div class="loading_bg">
+        <div class="load_show">
+            <div class="loader"></div>
+            <p>載入中...</p>
+        </div>
+    </div>
+    <header
+        style="position:sticky;top: 0; height:136px; background: #fff;border-bottom: 38px solid #f2f2f2;z-index: 999;">
+    </header>
+    <h1>大榮旅遊</h1>
+    <a href="#" class="scrolltop"></a>
+    <section class="kv_section">
+        <!-- kv輪播 -->
+        <ul class="kv_list">
+            <li><a class="kv_link" href="#">
+                    <picture>
+                        <source
+                            srcset="https://www.dtsgroup.com.tw/pic/ADimg/1_home/%E5%8C%97%E6%B5%B7%E9%81%930604_m.jpg"
+                            media="(max-width: 640px)" />
+                        <source
+                            srcset="https://www.dtsgroup.com.tw/pic/ADimg/1_home/%E5%8C%97%E6%B5%B7%E9%81%930604.jpg">
+                        <img data-src="https://www.dtsgroup.com.tw/pic/ADimg/1_home/%E5%8C%97%E6%B5%B7%E9%81%930604.jpg"
+                            class="lazyload" alt="請填寫seo相關文字" title="請填寫seo相關文字">
+                    </picture>
+                </a>
+            </li>
+            <li><a class="kv_link" href="#">
+                    <picture>
+                        <source srcset="https://www.dtsgroup.com.tw/pic/ADimg/1_home/%E4%B9%9D%E5%B7%9E0605_M.jpg"
+                            media="(max-width: 640px)" />
+                        <source srcset="https://www.dtsgroup.com.tw/pic/ADimg/1_home/%E4%B9%9D%E5%B7%9E0605.jpg">
+                        <img data-src="https://www.dtsgroup.com.tw/pic/ADimg/1_home/%E4%B9%9D%E5%B7%9E0605.jpg"
+                            class="lazyload" alt="請填寫seo相關文字" title="請填寫seo相關文字">
+                    </picture>
+                </a>
+            </li>
+            <li><a class="kv_link" href="#">
+                    <picture>
+                        <source srcset="https://fakeimg.pl/640x640/?text=kv_slick3_640x640_M.jpg"
+                            media="(max-width: 640px)" />
+                        <source srcset="https://fakeimg.pl/1920x550/?text=kv_slick3_1920x550_pc.jpg">
+                        <img data-src="https://fakeimg.pl/1920x550/?text=kv_slick3_1920x550_pc.jpg" class="lazyload"
+                            alt="請填寫seo相關文字" title="請填寫seo相關文字">
+                    </picture>
+                </a>
+            </li>
+            <li><a class="kv_link" href="#">
+                    <picture>
+                        <source srcset="https://fakeimg.pl/640x640/?text=kv_slick4_640x640_M.jpg"
+                            media="(max-width: 640px)" />
+                        <source srcset="https://fakeimg.pl/1920x550/?text=kv_slick4_1920x550_pc.jpg">
+                        <img data-src="https://fakeimg.pl/1920x550/?text=kv_slick4_1920x550_pc.jpg" class="lazyload"
+                            alt="請填寫seo相關文字" title="請填寫seo相關文字">
+                    </picture>
+                </a>
+            </li>
+        </ul>
+        <!-- kv輪播 end-->
+        <!-- 搜尋欄 -->
+        <div class="search_bar container">
+            <div class="search_group">
+                <div class="form_select mobile_row-1">
+                    <label for="">出發地</label>
+                    <select name="" id="">
+                        <option value="">不限</option>
+                        <option value="">台北/松山機場</option>
+                        <option value="">台北/桃園機場</option>
+                    </select>
+                </div>
+                <div class="form_select mobile_row-2">
+                    <label for="">
+                        <div class="form_icon"><img
+                                src="images/googlefonts_icon/location_on_24dp_FILL1_wght400_GRAD0_opsz24.svg" alt="">
+                        </div>旅遊地區
+                    </label>
+                    <select name="" id="">
+                        <option value="">請選擇</option>
+                        <option value="">日本</option>
+                        <option value="">沖繩(琉球)</option>
+                    </select>
+                </div>
+                <div class="form_select mobile_row-2">
+                    <label for="">目的地</label>
+                    <select name="" id="">
+                        <option value="">請選擇</option>
+                        <option value="">九州(福岡．熊本．鹿兒島)</option>
+                    </select>
+                </div>
+                <div class="form_datepicker mobile_row-1">
+                    <label for="">
+                        <div class="form_icon"><img
+                                src="images/googlefonts_icon/date_range_24dp_FILL1_wght400_GRAD0_opsz24.svg" alt="">
+                        </div>出發期間
+                    </label>
+                    <div class="date_group mobile_row-1">
+                        <input type="text" id="datepicker_from" autocomplete="off">
+                        <span>-</span>
+                        <input type="text" id="datepicker_to" autocomplete="off">
+                    </div>
+                </div>
+                <div class="serch_btn">
+                    <button>
+                        <div class="form_icon"><img
+                                src="images/googlefonts_icon/search_24dp_FILL1_wght400_GRAD0_opsz24.svg" alt=""></div>
+                        搜尋
+                        <div class="deco_tri tri_1"></div>
+                        <div class="deco_tri tri_2"></div>
+                        <div class="deco_tri tri_3"></div>
+                    </button>
+                </div>
+            </div>
+            <div class="hotissue">
+                <h2>熱門</h2>
+                <ul>
+                    <li><a href="#">
+                            <h3>立山黑部</h3>
+                        </a></li>
+                    <li><a href="#">
+                            <h3>東京富士山超美打卡位</h3>
+                        </a></li>
+                    <li><a href="#">
+                            <h3>沖繩海景飯店</h3>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="banner_sec">
+        <div class="container">
+            <div class="left_banner">
+                <a class="banner_link" href="#"> <img src="images/banner1_1.jpg" alt="北海道25888"></a>
+
+            </div>
+            <div class="right_banner">
+                <div class="inner">
+                    <a class="banner_link" href="#"><img src="images/banner2_1.jpg" alt="xxx"></a>
+                    <a class="banner_link" href="#"><img src="images/banner2_2.jpeg" alt="xxx"></a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="tourgroup_sec">
+        <div class="container">
+            <h2>跟團行程</h2>
+            <div class="area_outer">
+                <ul class="area_menu">
+                    <li class="area_item">
+                        <h3>沖繩</h3>
+                    </li>
+                    <li class="area_item">
+                        <h3>北海道</h3>
+                    </li>
+                    <li class="area_item">
+                        <h3>名古屋</h3>
+                    </li>
+                    <li class="area_item">
+                        <h3>東京</h3>
+                    </li>
+                    <li class="area_item">
+                        <h3>大阪</h3>
+                    </li>
+                    <li class="area_item">
+                        <h3>九州</h3>
+                    </li>
+                    <li class="area_item">
+                        <h3>四國</h3>
+                    </li>
+                </ul>
+            </div>
+            <!-- 單一地區行程最多10個 -->
+            <ul class="tourgroup_list">
+                <li><a class="tourgroup_link" href="#" title="享趣沖繩~海邊飯店.純白瀨長島.海洋博水族館.漫步美國村五日很多很多文字">
+                        <div class="tourgroup_img"><img class="tourgroup_img"
+                                src="https://dcimg.travel.net.tw/28838401/eWeb_gogojp/IMGDB/000006/000325/00004062.jpg"
+                                alt="享趣沖繩~海邊飯店.純白瀨長島.海洋博水族館.漫步美國村五日很多很多文字"></div>
+                        <h4 class="tourgroup_name">享趣沖繩~海邊飯店.純白瀨長島.海洋博水族館.漫步美國村五日很多很多文字</h4>
+                        <p class="tourgroup_price">27900</p>
+                    </a>
+                </li>
+                <li><a class="tourgroup_link" href="#" title="蔚藍沖繩~系滿漁市自選海鮮.美之海水族館.幸福岬角果報崖四日">
+                        <div class="tourgroup_img"><img class="tourgroup_img"
+                                src="https://dcimg.travel.net.tw/28838401/eWeb_gogojp/IMGDB/000006/000323/00013724.JPG"
+                                alt="蔚藍沖繩~系滿漁市自選海鮮.美之海水族館.幸福岬角果報崖四日"></div>
+                        <h4 class="tourgroup_name">
+                            蔚藍沖繩~系滿漁市自選海鮮.美之海水族館.幸福岬角果報崖四日</h4>
+                        <p class="tourgroup_price">25900</p>
+                    </a>
+                </li>
+                <li><a class="tourgroup_link" href="#" title="親子遊沖繩~奧武島.美之海水族館.兒童王國.古宇利戲水四日">
+                        <div class="tourgroup_img"><img class="tourgroup_img"
+                                src="https://ggj.fillo.com.tw/material-alias/%E9%A6%96%E9%A0%81/%E8%B7%9F%E5%9C%98%E8%A1%8C%E7%A8%8B/%E6%B2%96%E7%B9%A9/00004057.jpeg"
+                                alt="親子遊沖繩~奧武島.美之海水族館.兒童王國.古宇利戲水四日"></div>
+                        <h4 class="tourgroup_name">
+                            親子遊沖繩~奧武島.美之海水族館.兒童王國.古宇利戲水四日</h4>
+                        <p class="tourgroup_price">29900</p>
+                    </a>
+                </li>
+                <li><a class="tourgroup_link" href="#" title="享趣沖繩~海邊飯店.純白瀨長島.海洋博水族館.漫步美國村五日">
+                        <div class="tourgroup_img"><img class="tourgroup_img"
+                                src="https://dcimg.travel.net.tw/28838401/eWeb_gogojp/IMGDB/000006/000325/00004062.jpg"
+                                alt="享趣沖繩~海邊飯店.純白瀨長島.海洋博水族館.漫步美國村五日"></div>
+                        <h4 class="tourgroup_name">享趣沖繩~海邊飯店.純白瀨長島.海洋博水族館.漫步美國村五日</h4>
+                        <p class="tourgroup_price">27900</p>
+                    </a>
+                </li>
+                <li><a class="tourgroup_link" href="#" title="蔚藍沖繩~系滿漁市自選海鮮.美之海水族館.幸福岬角果報崖四日">
+                        <div class="tourgroup_img"><img class="tourgroup_img"
+                                src="https://dcimg.travel.net.tw/28838401/eWeb_gogojp/IMGDB/000006/000323/00013724.JPG"
+                                alt="蔚藍沖繩~系滿漁市自選海鮮.美之海水族館.幸福岬角果報崖四日"></div>
+                        <h4 class="tourgroup_name">
+                            蔚藍沖繩~系滿漁市自選海鮮.美之海水族館.幸福岬角果報崖四日</h4>
+                        <p class="tourgroup_price">25900</p>
+                    </a>
+                </li>
+                <li><a class="tourgroup_link" href="#" title="親子遊沖繩~奧武島.美之海水族館.兒童王國.古宇利戲水四日">
+                        <div class="tourgroup_img"><img class="tourgroup_img"
+                                src="https://ggj.fillo.com.tw/material-alias/%E9%A6%96%E9%A0%81/%E8%B7%9F%E5%9C%98%E8%A1%8C%E7%A8%8B/%E6%B2%96%E7%B9%A9/00004057.jpeg"
+                                alt="親子遊沖繩~奧武島.美之海水族館.兒童王國.古宇利戲水四日"></div>
+                        <h4 class="tourgroup_name">
+                            親子遊沖繩~奧武島.美之海水族館.兒童王國.古宇利戲水四日</h4>
+                        <p class="tourgroup_price">29900</p>
+                    </a>
+                </li>
+                <li><a class="tourgroup_link" href="#" title="享趣沖繩~海邊飯店.純白瀨長島.海洋博水族館.漫步美國村五日">
+                        <div class="tourgroup_img"><img class="tourgroup_img"
+                                src="https://dcimg.travel.net.tw/28838401/eWeb_gogojp/IMGDB/000006/000325/00004062.jpg"
+                                alt="享趣沖繩~海邊飯店.純白瀨長島.海洋博水族館.漫步美國村五日"></div>
+                        <h4 class="tourgroup_name">享趣沖繩~海邊飯店.純白瀨長島.海洋博水族館.漫步美國村五日</h4>
+                        <p class="tourgroup_price">27900</p>
+                    </a>
+                </li>
+                <li><a class="tourgroup_link" href="#" title="蔚藍沖繩~系滿漁市自選海鮮.美之海水族館.幸福岬角果報崖四日">
+                        <div class="tourgroup_img"><img class="tourgroup_img"
+                                src="https://dcimg.travel.net.tw/28838401/eWeb_gogojp/IMGDB/000006/000323/00013724.JPG"
+                                alt="蔚藍沖繩~系滿漁市自選海鮮.美之海水族館.幸福岬角果報崖四日"></div>
+                        <h4 class="tourgroup_name">
+                            蔚藍沖繩~系滿漁市自選海鮮.美之海水族館.幸福岬角果報崖四日</h4>
+                        <p class="tourgroup_price">25900</p>
+                    </a>
+                </li>
+                <li><a class="tourgroup_link" href="#" title="親子遊沖繩~奧武島.美之海水族館.兒童王國.古宇利戲水四日">
+                        <div class="tourgroup_img"><img class="tourgroup_img"
+                                src="https://ggj.fillo.com.tw/material-alias/%E9%A6%96%E9%A0%81/%E8%B7%9F%E5%9C%98%E8%A1%8C%E7%A8%8B/%E6%B2%96%E7%B9%A9/00004057.jpeg"
+                                alt="親子遊沖繩~奧武島.美之海水族館.兒童王國.古宇利戲水四日"></div>
+                        <h4 class="tourgroup_name">
+                            親子遊沖繩~奧武島.美之海水族館.兒童王國.古宇利戲水四日</h4>
+                        <p class="tourgroup_price">29900</p>
+                    </a>
+                </li>
+                <li><a class="tourgroup_link" href="#" title="享趣沖繩~海邊飯店.純白瀨長島.海洋博水族館.漫步美國村五日">
+                        <div class="tourgroup_img"><img class="tourgroup_img"
+                                src="https://dcimg.travel.net.tw/28838401/eWeb_gogojp/IMGDB/000006/000325/00004062.jpg"
+                                alt="享趣沖繩~海邊飯店.純白瀨長島.海洋博水族館.漫步美國村五日"></div>
+                        <h4 class="tourgroup_name">享趣沖繩~海邊飯店.純白瀨長島.海洋博水族館.漫步美國村五日</h4>
+                        <p class="tourgroup_price">27900</p>
+                    </a>
+                </li>
+            </ul>
+            <a class="dts_btn" href="">查看更多行程</a>
+        </div>
+    </section>
+    <section class="trend_sec">
+        <div class="container">
+            <div class="subtitle">
+                <div class="icon"><img src="images/icon_light.png"></div>
+                <h2>網友熱搜第一<span>旅遊控最不能錯過的景點</span></h2>
+            </div>
+            <ul class="card_list">
+                <li><a href="" class="card_link">
+                        <div class="img">
+                            <img src="https://ggj.fillo.com.tw/material-alias/%E9%A6%96%E9%A0%81/%E7%B6%B2%E5%8F%8B%E7%86%B1%E6%90%9C%E7%AC%AC%E4%B8%80/%E9%80%A3%E4%BC%91.jpeg"
+                                alt="2024連休玩樂攻略">
+                        </div>
+                        <div class="info">
+                            <h3>2024連休玩樂攻略</h3>
+                            <p>玩咖必看!出遊靈感！想飛哪就出發</p>
+                        </div>
+                    </a>
+                </li>
+                <li><a href="" class="card_link">
+                        <div class="img">
+                            <img src="https://ggj.fillo.com.tw/material-alias/%E9%A6%96%E9%A0%81/%E7%B6%B2%E5%8F%8B%E7%86%B1%E6%90%9C%E7%AC%AC%E4%B8%80/1205%E7%AB%8B%E5%B1%B1.jpeg"
+                                alt="黑部立山★雪之大谷">
+                        </div>
+                        <div class="info">
+                            <h3>黑部立山★雪之大谷</h3>
+                            <p>感受數十呎高的雪牆無比震撼,絕不錯過的春天限定絕景!</p>
+                        </div>
+                    </a>
+                </li>
+                <li><a href="" class="card_link">
+                        <div class="img">
+                            <img src="https://ggj.fillo.com.tw/material-alias/%E9%A6%96%E9%A0%81/%E7%B6%B2%E5%8F%8B%E7%86%B1%E6%90%9C%E7%AC%AC%E4%B8%80/%E9%AC%A7%E8%91%97%E7%8E%A9.jpeg"
+                                alt="浩角翔起沖繩旅遊推薦">
+                        </div>
+                        <div class="info">
+                            <h3>浩角翔起沖繩旅遊推薦</h3>
+                            <p>跟著鬧著玩包車旅遊沖繩私房美景，不藏私通通公開!
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li><a href="" class="card_link">
+                        <div class="img">
+                            <img src="https://ggj.fillo.com.tw/material-alias/%E9%A6%96%E9%A0%81/%E7%B6%B2%E5%8F%8B%E7%86%B1%E6%90%9C%E7%AC%AC%E4%B8%80/diy_1.jpeg"
+                                alt="自組一團">
+                        </div>
+                        <div class="info">
+                            <h3>自組一團</h3>
+                            <p>專業旅遊規劃師為您量身打造，企業、家族、自由行都行!</p>
+                        </div>
+                    </a>
+                </li>
+                <li><a href="" class="card_link">
+                        <div class="img">
+                            <img src="https://ggj.fillo.com.tw/material-alias/%E9%A6%96%E9%A0%81/%E7%B6%B2%E5%8F%8B%E7%86%B1%E6%90%9C%E7%AC%AC%E4%B8%80/%E9%80%A3%E4%BC%91.jpeg"
+                                alt="2024連休玩樂攻略">
+                        </div>
+                        <div class="info">
+                            <h3>2024連休玩樂攻略</h3>
+                            <p>玩咖必看!出遊靈感！想飛哪就出發</p>
+                        </div>
+                    </a>
+                </li>
+                <li><a href="" class="card_link">
+                        <div class="img">
+                            <img src="https://ggj.fillo.com.tw/material-alias/%E9%A6%96%E9%A0%81/%E7%B6%B2%E5%8F%8B%E7%86%B1%E6%90%9C%E7%AC%AC%E4%B8%80/1205%E7%AB%8B%E5%B1%B1.jpeg"
+                                alt="黑部立山★雪之大谷">
+                        </div>
+                        <div class="info">
+                            <h3>黑部立山★雪之大谷</h3>
+                            <p>感受數十呎高的雪牆無比震撼,絕不錯過的春天限定絕景!</p>
+                        </div>
+                    </a>
+                </li>
+                <li><a href="" class="card_link">
+                        <div class="img">
+                            <img src="https://ggj.fillo.com.tw/material-alias/%E9%A6%96%E9%A0%81/%E7%B6%B2%E5%8F%8B%E7%86%B1%E6%90%9C%E7%AC%AC%E4%B8%80/%E9%AC%A7%E8%91%97%E7%8E%A9.jpeg"
+                                alt="浩角翔起沖繩旅遊推薦">
+                        </div>
+                        <div class="info">
+                            <h3>浩角翔起沖繩旅遊推薦</h3>
+                            <p>跟著鬧著玩包車旅遊沖繩私房美景，不藏私通通公開!
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li><a href="" class="card_link">
+                        <div class="img">
+                            <img src="https://ggj.fillo.com.tw/material-alias/%E9%A6%96%E9%A0%81/%E7%B6%B2%E5%8F%8B%E7%86%B1%E6%90%9C%E7%AC%AC%E4%B8%80/diy_1.jpeg"
+                                alt="自組一團">
+                        </div>
+                        <div class="info">
+                            <h3>自組一團</h3>
+                            <p>專業旅遊規劃師為您量身打造，企業、家族、自由行都行!</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="focus_sec">
+        <div class="container">
+            <div class="subtitle">
+                <div class="icon"><img src="images/icon_flag.png"></div>
+                <h2>焦點行程<span>不能錯過的好玩地點!</span></h2>
+            </div>
+            <ul class="spot_list">
+                <li><a class="spot_link" href="">
+                        <img src="https://ggj.fillo.com.tw/material-alias/%E4%B9%9D%E5%B7%9E%E6%A9%98%E5%AD%90%E9%90%B5%E9%81%93.jpg"
+                            alt="九州橘子鐵道之旅|享受鹿兒島美食">
+                        <div class="mask"></div>
+                        <h3>九州橘子鐵道之旅|享受鹿兒島美食</h3>
+                        <div class="fake_btn">前往行程</div>
+                    </a>
+                </li>
+                <li><a class="spot_link" href="">
+                        <img src="https://ggj.fillo.com.tw/material-alias/%E5%B0%8F%E8%B1%86%E5%B3%B6.jpg"
+                            alt="四國|瀨戶內海小豆島">
+                        <div class="mask"></div>
+                        <h3>四國|瀨戶內海小豆島</h3>
+                        <div class="fake_btn">前往行程</div>
+                    </a>
+                </li>
+                <li><a class="spot_link" href="">
+                        <img src="https://ggj.fillo.com.tw/material-alias/%E6%9D%B1%E4%BA%AC0503.jpg"
+                            alt="美景點|富士山人氣打卡點">
+                        <div class="mask"></div>
+                        <h3>網美景點|富士山人氣打卡點</h3>
+                        <div class="fake_btn">前往行程</div>
+                    </a>
+                </li>
+                <li><a class="spot_link" href="">
+                        <img src="https://ggj.fillo.com.tw/material-alias/%E4%B9%9D%E5%B7%9E%E6%A9%98%E5%AD%90%E9%90%B5%E9%81%93.jpg"
+                            alt="利尻島|日本極北海島之旅">
+                        <div class="mask"></div>
+                        <h3>利尻島|日本極北海島之旅</h3>
+                        <div class="fake_btn">前往行程</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- footer為暫時樣式，之後請套公版 -->
+    <footer style="background: #333;padding: 20px; ">
+        <p style="color: #fff;text-align: center;">大榮旅遊集團版權所有 ©2023 DTS Group all rights reserved.</p>
+    </footer>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/datepicker-zh-TW.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script>
+
+        $(function () {
+            // 簡易loading效果
+            setTimeout(function () {
+                $('.loading_bg').fadeOut(1000)
+            }, 2000)
+
+            // scrolltop
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 200) {
+                    $('.scrolltop').fadeIn();
+                } else {
+                    $('.scrolltop').fadeOut();
+                }
+            });
+
+            // Smooth scroll to top
+            $('.scrolltop').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 800);
+                return false;
+            });
+        })
+
+        // kv輪播
+        $('.kv_list').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            lazyLoad: 'ondemand',
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 3000,
+
+        });
+        // 網友熱搜輪播
+        $('.card_list').slick({
+            infinite: false,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: true,
+            lazyLoad: 'ondemand',
+            speed: 200,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 3000,
+            responsive: [
+                {
+                    breakpoint: 821,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                    }
+                },
+                {
+                    breakpoint: 640,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },
+            ],
+        });
+       
+        // search bar 日期選單
+        $.datepicker.setDefaults($.datepicker.regional["zh-TW"]); //中文化
+        $(function () {
+            var dateFormat = "yy/mm/dd/",
+                from = $("#datepicker_from").datepicker({
+                    minDate: 0, // 起日最小日為今日
+                    maxDate: "+1Y", // 起日最大日為一年後的今日                    
+                })
+                    .on("change", function () {
+                        var theDate = $(this).datepicker('getDate')
+                        to.datepicker("option", "minDate", theDate);
+                        // 迄日不可小於起日
+                    }),
+                to = $("#datepicker_to").datepicker({
+                    minDate: 0,
+                    maxDate: "+1Y",
+                })
+
+        });
+
+    </script>
+</body>
+
+</html>

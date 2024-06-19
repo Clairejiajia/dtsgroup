@@ -1,0 +1,315 @@
+//搜尋欄
+.search_bar {
+    position: relative;
+    top: -40px;
+    padding: 20px;
+    color: $dts_search_txt;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    box-shadow: 0 30px 38px -25px rgba(0, 0, 0, .3);
+}
+
+.search_group {
+    display: flex;
+    margin-bottom: 20px;
+
+    .form_select,
+    .form_datepicker {
+        display: flex;
+        flex-direction: column;
+        padding: 0 6px;
+
+        label {
+            line-height: 1.5;
+            margin-bottom: 5px;
+        }
+
+        select,
+        input {
+            height: 40px;
+            line-height: 40px;
+            color: $dts_search_txt;
+            background: #fff;
+            border: 1px solid #dcdfe6;
+            border-radius: 4px;
+            outline: none;
+        }
+    }
+
+    .form_select {
+        width: 20%;
+
+        &:nth-child(1) {
+            padding-left: 0;
+        }
+    }
+
+    .form_datepicker {
+        width: 30%;
+
+    }
+
+    .form_icon {
+        width: 20px;
+        display: inline-block;
+        vertical-align: sub;
+    }
+
+    .date_group {
+        display: flex;
+        align-items: center;
+
+        span {
+            padding: 0 6px;
+        }
+
+        input {
+            width: 48%;
+        }
+    }
+
+    .serch_btn {
+        padding-top: 24px;
+        width: 100px;
+        flex-grow: 1;
+
+        .form_icon {
+            width: 24px;
+
+        }
+
+        button {
+            position: relative;
+            width: 100%;
+
+            height: 40px;
+            background: $dts_green;
+            color: #fff;
+            border: 0;
+            font-size: 18px;
+
+            .deco_tri {
+                display: block;
+                position: absolute;
+                width: 0;
+                height: 0;
+            }
+
+            .tri_1 {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-top: 10px solid #fff;
+                border-left: 10px solid transparent;
+                top: 0;
+                right: 0;
+            }
+
+            .tri_2 {
+                border-bottom: 15px solid #fff;
+                border-right: 15px solid transparent;
+                bottom: 0;
+                left: 0;
+            }
+
+            .tri_3 {
+                border-bottom: 10px solid #ad005a;
+                border-right: 10px solid transparent;
+                bottom: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            &:hover {
+                background: $dts_purple;
+            }
+        }
+
+
+    }
+}
+
+
+.hotissue {
+    display: flex;
+
+    h2 {
+        padding-right: 10px;
+        border-right: 1px solid #d9d9d9;
+    }
+
+    ul {
+        display: flex;
+        padding-left: 10px;
+
+        li {
+            padding-right: 10px;
+
+            a {
+                color: $dts_link;
+
+                &:hover {
+                    color: $dts_link_hov;
+
+                }
+            }
+        }
+    }
+}
+
+
+// jquery-ui datepicker自訂選單
+.ui-widget.ui-widget-content {
+    border: 1px solid #dcdfe6;
+}
+
+.ui-widget-header {
+    background: transparent;
+    border: 0;
+}
+
+.ui-datepicker {
+
+
+    .ui-datepicker-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ui-datepicker-prev,
+    .ui-datepicker-next {
+        top: 50%;
+        transform: translateY(-50%);
+        background: $dts_bg_gray;
+        border-radius: 50%;
+
+        span {
+            background-size: 120%;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+    }
+
+    .ui-datepicker-prev {
+        span {
+            background-image: url(../images/googlefonts_icon/chevron_left_24dp_FILL1_wght400_GRAD0_opsz24.svg);
+        }
+    }
+
+    .ui-datepicker-next {
+        span {
+            background-image: url(../images/googlefonts_icon/chevron_right_24dp_FILL1_wght400_GRAD0_opsz24.svg);
+        }
+    }
+
+    select {
+
+        &.ui-datepicker-month,
+        &.ui-datepicker-year {
+            height: 40px;
+            line-height: 40px;
+            color: #666666;
+            background: #fff;
+            border: 1px solid #dcdfe6;
+            border-radius: 4px;
+            outline: none;
+            text-align: center;
+        }
+
+        &.ui-datepicker-month {
+            margin-left: 0.5rem;
+        }
+
+        &.ui-datepicker-year {
+            margin-right: 0.5rem;
+        }
+    }
+
+
+    th {
+        color: $dts_green;
+
+        &.ui-datepicker-week-end {
+            color: $dts_purple;
+        }
+    }
+
+
+
+    .ui-state-default,
+    .ui-widget-content .ui-state-default,
+    .ui-widget-header .ui-state-default,
+    .ui-button,
+    html .ui-button.ui-state-disabled:hover,
+    html .ui-button.ui-state-disabled:active {
+        border: 0;
+        background: transparent;
+        color: $dts_search_txt;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .ui-state-active,
+    .ui-widget-content .ui-state-active,
+    .ui-widget-header .ui-state-active,
+    a.ui-button:active,
+    .ui-button:active,
+    .ui-button.ui-state-active:hover {
+        background: $dts_green;
+        color: #fff;
+        border-radius: 4px;
+    }
+
+}
+
+@media screen and (max-width:640px) {
+    .search_group {
+        flex-wrap: wrap;
+        justify-content: space-between;
+     
+
+        .form_select,
+        .form_datepicker {
+            margin: 0 0 0.5rem 0;
+            padding: 0;
+        }
+
+        .serch_btn {
+            padding-top:1rem;width: 100%;
+            max-width: 150px;
+            margin: 0 auto;
+        }
+
+        .mobile_row-1 {
+            width: 100%;
+        }
+
+        .mobile_row-2 {
+            width: 48%;
+        }
+
+    }
+    .search_bar{
+        padding: 10px 15px;
+    }
+
+    .hotissue{
+        align-items: center;
+        h2{
+            width: 40px;
+            padding-right: 5px;
+        }
+        ul{
+            flex-wrap: wrap;
+            li {
+                a{display: block;
+                    padding: 5px 0;
+                }
+            }
+        }
+    }
+}
