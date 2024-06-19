@@ -20,7 +20,7 @@ $dts_fake_btn:#73e5a1;
 
 html,
 body {
-    font-size: 15px; 
+    font-size: 15px;
 }
 
 img {
@@ -101,6 +101,15 @@ a {
     transition: 0.5s;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    height: 136px;
+    background: #fff;
+    border-bottom: 38px solid #f2f2f2;
+    z-index: 999;
+}
+
 .scrolltop {
     display: none;
     position: fixed;
@@ -159,16 +168,23 @@ a {
 }
 
 @media screen and (max-width:640px) {
+    header{
+        height: 60px;
+        bottom: 0;
+    }
     .subtitle {
         align-items: start;
         padding-bottom: 5px;
         line-height: 46px;
-h2{
-    font-size: 28px;
-}
+
+        h2 {
+            font-size: 28px;
+        }
+
         span {
             display: block;
-            padding: 0;font-size: 16px;
+            padding: 0;
+            font-size: 16px;
             line-height: 1.2;
         }
     }

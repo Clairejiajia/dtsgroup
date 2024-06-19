@@ -109,6 +109,16 @@ a {
   transition: 0.5s;
 }
 
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 136px;
+  background: #fff;
+  border-bottom: 38px solid #f2f2f2;
+  z-index: 999;
+}
+
 .scrolltop {
   display: none;
   position: fixed;
@@ -170,6 +180,10 @@ a {
 }
 
 @media screen and (max-width: 640px) {
+  header {
+    height: 60px;
+    bottom: 0;
+  }
   .subtitle {
     -webkit-box-align: start;
         -ms-flex-align: start;
