@@ -415,7 +415,11 @@
                         <div class="fake_btn">前往行程</div>
                     </a>
                 </li>
+
             </ul>
+            <div class="spot_scrollbar">
+                <div class="tumb"></div>
+            </div>
         </div>
     </section>
     <!-- footer為暫時樣式，之後請套公版 -->
@@ -494,7 +498,7 @@
                 },
             ],
         });
-       
+
         // search bar 日期選單
         $.datepicker.setDefaults($.datepicker.regional["zh-TW"]); //中文化
         $(function () {
@@ -515,6 +519,24 @@
 
         });
 
+
+        // spotarea scrollbar計算 
+        $(function () {
+            var $item = $('.spot_list li'),
+                $scrolltumb = $('.spot_scrollbar .tumb'),
+                count = $item.length,
+                bar_size = 1 / (count - 1) * 100 + '%'
+
+            $scrolltumb.css('width', bar_size)
+
+            $('.spot_list').scroll(function () {
+                var item_pos = Math.abs($item.first().position().left),
+                    item_all_width = $item.width() * (count - 1),
+                    bar_move = item_pos / item_all_width * 100 + '%'
+
+                $scrolltumb.css('left', bar_move)
+            })
+        })
     </script>
 </body>
 
