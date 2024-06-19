@@ -182,7 +182,7 @@ header {
 @media screen and (max-width: 640px) {
   header {
     height: 60px;
-    bottom: 0;
+    border: 0;
   }
   .subtitle {
     -webkit-box-align: start;
