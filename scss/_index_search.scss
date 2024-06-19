@@ -19,14 +19,13 @@
         flex-direction: column;
         padding: 0 6px;
 
-        label {font-size: 16px;
+        label {
             line-height: 1.2;
             margin-bottom: 5px;
         }
 
         select,
         input {
-            font-size: 16px;
             height: 40px;
             line-height: 40px;
             color: $dts_search_txt;
@@ -65,7 +64,6 @@
         }
 
         input {
-            font-size: 16px;
             width: 48%;
         }
     }
@@ -269,15 +267,28 @@
 }
 
 @media screen and (max-width:640px) {
+    .search_bar {
+        top: -1rem;
+    }
+
     .search_group {
         flex-wrap: wrap;
         justify-content: space-between;
-
-
-        .form_select,
-        .form_datepicker {
-            margin: 0 0 0.5rem 0;
+        margin-bottom: 1rem;
+        .form_select, .form_datepicker {
             padding: 0;
+            select,input{
+                height: 35px;line-height: 35px;
+            }
+        }
+        .form_select {
+            margin: 0 0 0.5rem 0;
+          
+        }
+
+        .form_datepicker {
+            margin: 0;
+       
         }
 
         .serch_btn {

@@ -63,14 +63,17 @@
     .kv_list {
         .kv_link {
             width: 100vw;
-            height: 75vw;
+            height: 60vw;
             min-height: auto;
             max-height: none;
 
             picture,
             img {
-                aspect-ratio:4/3;
+                aspect-ratio:5/3;
             }
+        }
+        .slick-dots{
+            bottom: 15px;
         }
     }
 }
