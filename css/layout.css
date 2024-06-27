@@ -455,6 +455,11 @@ footer .copyright p {
 }
 
 @media screen and (max-width: 640px) {
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
   header .inner {
     position: relative;
     display: -webkit-box;

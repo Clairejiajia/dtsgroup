@@ -222,6 +222,9 @@ h1 {
 }
 
 @media screen and (max-width: 640px) {
+  .kv_section {
+    margin-top: 62px;
+  }
   .kv_list .kv_link {
     width: 100vw;
     height: 60vw;

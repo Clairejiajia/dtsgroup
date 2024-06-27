@@ -448,7 +448,9 @@ footer {
 }
 
 @media screen and (max-width:640px) {
-    header {
+    header {position: fixed;
+        width: 100%;
+        top: 0;
         .inner {
             position: relative;
             display: flex;
