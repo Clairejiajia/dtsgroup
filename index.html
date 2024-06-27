@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
@@ -29,8 +30,8 @@
             <div class="loader"></div>
             <p>載入中...</p>
         </div>
-    </div>
-    <!-- header為假樣式示意用，串接正式用header 請移除樣式 -->
+    </div>    
+    
     <header></header>
     <h1>大榮旅遊</h1>
     <a href="#" class="scrolltop"></a>
@@ -437,10 +438,7 @@
             </div>
         </div>
     </section>
-    <!-- footer為暫時樣式，之後請套公版 -->
-    <footer style="background: #333;padding: 20px; ">
-        <p style="color: #fff;text-align: center;">大榮旅遊集團版權所有 ©2023 DTS Group all rights reserved.</p>
-    </footer>
+    <footer></footer>
 
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
@@ -449,6 +447,9 @@
     <script>
 
         $(function () {
+           $('header').load('include/header.html')
+           $('footer').load('include/footer.html')
+
             // 簡易loading效果
             setTimeout(function () {
                 $('.loading_bg').fadeOut(1000)

@@ -1,39 +1,5 @@
-//顏色
-$dts_green:#82a90e;
-$dts_purple:#ad005a;
-$dts_gray:#626262;
+@import 'dts_color';
 
-$dts_bg_gray:#F2F2F2;
-$dts_price:#ff0000;
-
-$dts_link:#3a8f87;
-$dts_link_hov:#393939;
-$dts_search_txt:#666666;
-$dts_txt:#393939;
-$dts_btn:#ff3333;
-$dts_fake_btn:#73e5a1;
-
-//共用樣式
-* {
-    box-sizing: border-box;
-}
-
-html,
-body {
-    font-size: 15px;
-}
-
-img {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.container {
-    width: 95%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
 .loading_bg {
     position: fixed;
@@ -94,20 +60,6 @@ h1 {
     overflow: hidden;
 }
 
-a {
-    text-decoration: none;
-    transition: 0.5s;
-}
-
-header {
-    position: sticky;
-    top: 0;
-    height: 136px;
-    background: #fff;
-    border-bottom: 38px solid #f2f2f2;
-    z-index: 999;
-}
-
 .scrolltop {
     display: none;
     position: fixed;
@@ -166,10 +118,7 @@ header {
 }
 
 @media screen and (max-width:640px) {
-    header{
-        height: 60px;
-       border: 0;
-    }
+ 
     .subtitle {
         align-items: start;
         padding-bottom: 5px;

@@ -1,26 +1,4 @@
 @charset "UTF-8";
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-html,
-body {
-  font-size: 15px;
-}
-
-img {
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.container {
-  width: 95%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 .loading_bg {
   position: fixed;
   top: 0;
@@ -103,22 +81,6 @@ h1 {
   overflow: hidden;
 }
 
-a {
-  text-decoration: none;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  height: 136px;
-  background: #fff;
-  border-bottom: 38px solid #f2f2f2;
-  z-index: 999;
-}
-
 .scrolltop {
   display: none;
   position: fixed;
@@ -180,10 +142,6 @@ header {
 }
 
 @media screen and (max-width: 640px) {
-  header {
-    height: 60px;
-    border: 0;
-  }
   .subtitle {
     -webkit-box-align: start;
         -ms-flex-align: start;
