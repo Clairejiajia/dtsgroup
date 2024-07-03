@@ -206,6 +206,8 @@ header .mainmenu .dropdown2 {
   padding: 40px 0;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
 }
 
@@ -244,6 +246,53 @@ header .mainmenu .dropdown2 li h3 {
 header .mainmenu .dropdown2 li p {
   color: #666666;
   text-align: center;
+}
+
+header .mainmenu .dropdown2 .moretopic {
+  display: block;
+  width: 100%;
+}
+
+header .mainmenu .dropdown2 .moretopic a {
+  position: relative;
+  display: block;
+  color: #82a90e;
+  border: 1px solid #82a90e;
+  width: 180px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+  margin: 40px auto 0;
+  padding-right: 20px;
+}
+
+header .mainmenu .dropdown2 .moretopic a span {
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background: #82a90e;
+}
+
+header .mainmenu .dropdown2 .moretopic a span:nth-child(1) {
+  top: 51%;
+  right: 40px;
+}
+
+header .mainmenu .dropdown2 .moretopic a span:nth-child(2) {
+  top: 51%;
+  right: 40px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+header .mainmenu .dropdown2 .moretopic a:hover {
+  background: #82a90e;
+  color: #fff;
+}
+
+header .mainmenu .dropdown2 .moretopic a:hover span {
+  background: #fff;
 }
 
 footer .pc_only {
@@ -674,6 +723,9 @@ footer .copyright p {
   }
   header .mainmenu .dropdown2 li:nth-last-child(1), header .mainmenu .dropdown2 li:nth-last-child(2) {
     margin-bottom: 0;
+  }
+  header .mainmenu .dropdown2 .moretopic a {
+    margin-top: 0;
   }
   header .mainmenu .dropdown2.on {
     display: -webkit-box !important;

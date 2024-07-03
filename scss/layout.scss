@@ -193,6 +193,7 @@ header {
             width: 100%;
             padding: 40px 0;
             justify-content: space-around;
+            flex-wrap: wrap;
             width: 100%;
 
             li {
@@ -228,6 +229,51 @@ header {
                     text-align: center;
 
 
+                }
+            }
+
+            .moretopic {
+                display: block;
+                width: 100%;
+
+                a {
+                    position: relative;
+                    display: block;
+                    color: $dts_green;
+                    border: 1px solid $dts_green;
+                    width: 180px;
+                    height: 40px;
+                    font-size: 16px;
+                    line-height: 40px;
+                    text-align: center;
+                    margin: 40px auto 0;
+                    padding-right: 20px;
+
+                    span {
+                        position: absolute;
+                        width:12px;
+                        height: 2px;
+                        background: $dts_green;
+
+                        &:nth-child(1) {
+                            top: 51%;
+                            right:40px;
+                        }
+
+                        &:nth-child(2) {
+                            top: 51%;
+                            right:40px;
+                            transform: rotate(90deg);
+                        }
+                    }
+
+                    &:hover {
+                        background: $dts_green;
+                        color: #fff;
+                        span{
+                            background: #fff;
+                        }
+                    }
                 }
             }
         }
@@ -448,9 +494,11 @@ footer {
 }
 
 @media screen and (max-width:640px) {
-    header {position: fixed;
+    header {
+        position: fixed;
         width: 100%;
         top: 0;
+
         .inner {
             position: relative;
             display: flex;
@@ -539,7 +587,7 @@ footer {
 
         .mainmenu {
             display: none;
-           
+
 
             .container {
                 width: 100%;
@@ -548,13 +596,14 @@ footer {
 
             &.on {
                 display: block;
-                position:fixed;
+                position: fixed;
                 top: 0;
                 left: 0;
                 width: 100%;
                 height: 100vh;
                 min-height: 100%;
-                padding-top: 62px; overflow-y: scroll;
+                padding-top: 62px;
+                overflow-y: scroll;
             }
 
             .area_nav {
@@ -683,7 +732,10 @@ footer {
                         margin-bottom: 0;
                     }
                 }
-
+                .moretopic{
+                    a{
+                        margin-top: 0;}
+                }
                 &.on {
                     display: flex !important;
                 }
@@ -693,13 +745,15 @@ footer {
 
     footer {
         .inner {
-            h4{
+            h4 {
                 font-size: 14px;
             }
+
             .right_area {
-                a{
+                a {
                     font-size: 14px;
                 }
+
                 .btn_50 {
                     width: 24%;
                 }
