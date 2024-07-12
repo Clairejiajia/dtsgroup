@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>北海道滑雪專頁-示意</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<style>
+    .wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        height: 1838px;
+
+    }
+
+    .example {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1920px;
+        margin: 0 auto;
+    }
+</style>
+
+<body>
+    <header></header>
+    <div class="wrapper">
+        <img class="example" src="images/project_hokaidow_snow.jpg" alt="">
+    </div>
+    <footer></footer>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+
+        $(function () {
+            $('header').load('include/header.html')
+            $('footer').load('include/footer.html')
+        })
+    </script>
+</body>
+
+</html>
