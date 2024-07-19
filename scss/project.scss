@@ -1,0 +1,248 @@
+@import 'dts_color';
+
+.loading_bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    z-index: 9999;
+
+    .load_show {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .loader {
+        width: 48px;
+        height: 48px;
+        border: 5px solid #d2d2d2;
+        border-bottom-color: $dts_green;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+        margin-bottom: 1rem;
+    }
+
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    p {
+        text-align: center;
+        color: $dts_green;
+        text-align: center;
+    }
+
+}
+
+html,
+body {
+    background: $project_bg;
+}
+
+.kv_section {
+    h1 {
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.2;
+        margin-top: 100px;
+
+        span {
+            font-size: 32px;
+            font-weight: bold;
+           
+        }
+    }
+}
+
+.group_section {
+    padding: 100px 0 60px;
+    background: url(../images/project_snow/project_snow_bg.jpg) no-repeat;
+    background-size: 1920px;
+    background-position: center bottom;
+    background-attachment: scroll;
+}
+
+.group_list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    >li {
+        width: 31%;
+        margin: 0 1% 40px;
+        background: #fff;
+        box-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, .15);
+
+    }
+
+    .group_link {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .info_box {
+            .img {
+                position: relative;
+                width: 100%;
+                aspect-ratio: 555/376;
+                overflow: hidden;
+
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%)
+                }
+            }
+
+            .text {
+                padding: 10px 15px;
+            }
+
+            h3 {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                line-clamp: 2;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                color: $project_text;
+                font-size: 20px;
+                line-height: 1.5;
+                letter-spacing: 2px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 14px;
+                color: $project_text2;
+                line-height: 1.5;
+                letter-spacing: 1px;
+            }
+
+            .info_list {
+                >li {
+                    position: relative;
+                    padding-left: 21px;
+                    color: $project_text2;
+                    font-size: 14px;
+                    line-height: 1.5;
+                    letter-spacing: 1px;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 11px;
+                        left: 0;
+                        transform: translateY(-50%);
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        background: url('../images/project_snow/project_list_icon.svg');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                    }
+                }
+            }
+        }
+
+        .price_box {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 15px 15px;
+
+            .price {
+                color: $dts_price;
+                font-size: 24px;
+
+                &::after {
+                    content: '起';
+                    font-size: 15px;
+                    color: $project_text2;
+                    padding-left: 2px;
+                }
+            }
+
+            .more_btn {
+                width: 100px;
+                height: 25px;
+                border-radius: 25px;
+                text-align: center;
+                line-height: 25px;
+                color: #fff;
+                background: $dts_green;
+                border: 1px solid $dts_green;
+            }
+        }
+
+        &:hover {
+            .info_box {
+                .img {
+                    img {
+                        width: 110%;
+                        transition: 0.5s;
+                    }
+                }
+
+                h3 {
+                    color: $dts_green;
+                }
+            }
+
+            .price_box {
+                .more_btn {
+                    color: $dts_green;
+                    background: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .kv_section {
+        margin-top: 62px;
+
+        h1 {
+            font-size: 32px;
+            margin-top: 30px;
+
+            span {
+                font-size:24px;
+            }
+        }
+
+    }
+
+    .group_section {
+        padding: 30px 0 10px;
+        background: $project_bg;
+    }
+
+    .group_list {
+        padding: 0 2.5%;
+
+        >li {
+            width: 100%;
+            margin: 0 0 30px;
+        }
+    }
+}
