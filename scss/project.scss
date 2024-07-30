@@ -170,9 +170,14 @@ body {
             padding: 0 15px 15px;
 
             .price {
-                color: $dts_price;
+                color: $project_price;
                 font-size: 24px;
-
+                &::before {
+                    content: 'NT$';
+                    font-size: 15px;
+                    color: $project_text2;
+                    padding-right: 2px;
+                }
                 &::after {
                     content: '起';
                     font-size: 15px;

@@ -206,8 +206,15 @@ body {
 }
 
 .group_list .group_link .price_box .price {
-  color: #ff0000;
+  color: #F54740;
   font-size: 24px;
+}
+
+.group_list .group_link .price_box .price::before {
+  content: 'NT$';
+  font-size: 15px;
+  color: #9c9c9c;
+  padding-right: 2px;
 }
 
 .group_list .group_link .price_box .price::after {
